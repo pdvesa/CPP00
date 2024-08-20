@@ -1,4 +1,4 @@
-CC = g++
+CC = c++
 
 CCFLAGS = -Wall -Werror -Wextra
 
