@@ -71,7 +71,7 @@ void    PhoneBook::search_contact()
 	{
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		std::cout << "Invalid index, try again" << std::endl;
+		std::cout << "Invalid index, try SEARCH again" << std::endl;
 		return ;
 	}
 	std::cout << contact_list[index].get_first_name() << std::endl;
