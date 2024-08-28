@@ -85,3 +85,7 @@ PhoneBook::PhoneBook()
 {
     contactCount = -1;
 }
+
+PhoneBook::~PhoneBook()
+{
+}
