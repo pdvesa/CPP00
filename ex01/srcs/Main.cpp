@@ -13,14 +13,14 @@ int main()
 {
 	std::string	input;
 	PhoneBook	phone_book;
-	
+
 	print_instructions();
 	while (std::getline(std::cin, input))
 	{
 		if (input == "ADD")
-			phone_book.add_contact();
+			phone_book.addContact();
 		else if (input == "SEARCH")
-			phone_book.search_contact();
+			phone_book.searchContact();
 		else if (input == "EXIT")
 			return (EXIT_SUCCESS);
 		else if (!input.empty())
