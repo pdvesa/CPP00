@@ -37,7 +37,8 @@ void	PhoneBook::addContact()
 	std::cin >> input;
 	contact.setPhoneNumber(input);
 	std::cout << "Please allow me to store your darkest secret:" << std::endl;
-	std::cin >> input;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	std::getline(std::cin, input);
 	contact.setSecret(input);
 	contact.setIndex(index);
 	contactList[index] = contact;
