@@ -26,18 +26,21 @@ void	PhoneBook::addContact()
 
 	std::cout << "Enter first name:" << std::endl;
 	std::cin >> input;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	contact.setFirstName(input);
 	std::cout << "Enter last name:" << std::endl;
 	std::cin >> input;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	contact.setLastName(input);
 	std::cout << "Enter nickname:" << std::endl;
 	std::cin >> input;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	contact.setNickname(input);
 	std::cout << "Enter phone number:" << std::endl;
 	std::cin >> input;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	contact.setPhoneNumber(input);
 	std::cout << "Please allow me to store your darkest secret:" << std::endl;
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	std::getline(std::cin, input);
 	contact.setSecret(input);
 	contact.setIndex(index);
@@ -48,6 +51,7 @@ void	PhoneBook::addContact()
 		index++;
 	if (contactCount < MAX_CONTACT - 1)
 		contactCount++;
+	std::cout << "Contact saved" << std::endl;
 }
 
 void    PhoneBook::searchContact()
